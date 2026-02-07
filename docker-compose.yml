@@ -3,10 +3,10 @@ services:
     image: docker.litellm.ai/berriai/litellm:main-stable
     #########################################
     ## Uncomment these lines to start proxy with a config.yaml file ##
-    #volumes:
-    #  - ../files/config.yaml:/app/config.yaml
-    #command:
-    #  - "--config=/app/config.yaml"
+    volumes:
+      - ../files/config.yaml:/app/config.yaml
+    command:
+      - "--config=/app/config.yaml"
     #########################################
     ports:
       - "4000:4000"
